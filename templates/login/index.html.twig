@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if app.user %}
+    <h1>Zalogowany jako: {{ app.user.username }}</h1>
+    <a href="{{ path('logout') }}" class="btn btn-danger">Wyloguj</a>
+{% else %}
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+        <label for="username">Login:</label>
+        <input type="text" name="_username" id="username" value="{{ last_username }}" required>
+        
+        <label for="password">Hasło:</label>
+        <input type="password" name="_password" id="password" required>
+
+        <button type="submit" class="btn btn-primary">Zaloguj</button>
+    </form>
+{% endif %}
+{% endblock %}

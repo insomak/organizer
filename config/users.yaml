@@ -1,0 +1,9 @@
+users:
+  admin:
+    email: admi11n@jus.pl
+    password: '$2y$13$KK21FRKAofsuDBrqDAXunelTtKGOf8rlQ86ix.vJTZIDusnOKg./u' # hasło zaszyfrowane bcryptem
+    roles: ['ROLE_ADMIN']
+  user:
+    email: user@jus.pl
+    password: '$2y$13$KK21FRKAofsuDBrqDAXunelTtKGOf8rlQ86ix.vJTZIDusnOKg./u' # hasło zaszyfrowane bcryptem
+    roles: ['ROLE_USER']
